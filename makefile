@@ -32,8 +32,9 @@ all : main.pdf
 #a-gift-of-fire-jp.dvi : a-gift-of-fire-jp.tex
 #	platex a-gift-of-fire-jp.tex
 
-%.dvi: %.tex prog-opt.bib
+%.dvi: %.tex body.tex introduction.tex
 	platex $<
+
 #$(LATEX)  $< ; $(LATEX)  $<  ; $(BIBTEX) $* ; $(LATEX) $* ; $(LATEX) $*
 
 #%.dvi: %.tex 
@@ -42,8 +43,8 @@ all : main.pdf
 #%.dvi: %.tex 
 #	(cd images ; $(EBB) *.png ) ; platex  $<
 
-%.dvi: %.tex %.bib
-	ebb *.png ; (cd images ; ebb *.png) ; platex  $< ; (cd images ; ebb *.png)
+#%.dvi: %.tex %.bib
+#	ebb *.png ; (cd images ; ebb *.png) ; platex  $< ; (cd images ; ebb *.png)
 #	$(BIBTEX) $%
 #	$(LATEX)  $< 
 #	$(BIBTEX) $%  
