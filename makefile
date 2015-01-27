@@ -32,10 +32,11 @@ all : main.pdf
 #a-gift-of-fire-jp.dvi : a-gift-of-fire-jp.tex
 #	platex a-gift-of-fire-jp.tex
 
-%.dvi: %.tex body.tex introduction.tex
-	platex $<
+%.dvi: %.tex body.tex introduction.tex fujii.bib
+	$(LATEX)  $< ; $(LATEX)  $<  ; $(BIBTEX) $* ; $(LATEX) $* ; $(LATEX) $*
+#platex $<
 
-#$(LATEX)  $< ; $(LATEX)  $<  ; $(BIBTEX) $* ; $(LATEX) $* ; $(LATEX) $*
+
 
 #%.dvi: %.tex 
 #	(cd images ; ebb *.png ) ; platex  $<

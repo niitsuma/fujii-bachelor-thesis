@@ -42,24 +42,30 @@
 \input{cover.tex}        % 表紙
 \thispagestyle{empty}
 
-\input{abstract.tex}     % 概要
-\thispagestyle{empty}
+% \input{abstract.tex}     % 概要
+% \thispagestyle{empty}
 
 \tableofcontents         % 目次作成コマンド
 \thispagestyle{empty}
 
-\input{introduction.tex} % はじめに
-\setcounter{page}{1}
+%\input{introduction.tex} % はじめに
+%\setcounter{page}{1}
 
 \input{body.tex}         % 論文メイン
 
 \input{summary.tex}      % まとめ
 \input{thanks.tex}       % 謝辞
-\input{bibliography.tex} % 参考文献
 
-\appendix
+%\input{bibliography.tex} % 参考文献
+%\bibliographystyle{plain}
+%\bibliographystyle{ieeetr}
+\bibliographystyle{acm}
+\bibliography{fujii}
 
-\chapter{プログラムコード}
-本研究で使ったプログラムで得に重要な部分について解説を行う．
+
+
+% \appendix
+% \chapter{プログラムコード}
+% 本研究で使ったプログラムで特に重要な部分について解説を行う．
 
 \end{document}
