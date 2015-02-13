@@ -14,7 +14,8 @@ EBB = extractbb -m
 
 
 
-all : main.pdf 
+all : body.pdf
+
 
 #a-gift-of-fire-jp.pdf : a-gift-of-fire-jp.dvi
 #	dvipdfmx a-gift-of-fire-jp.dvi
